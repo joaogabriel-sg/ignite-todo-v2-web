@@ -1,0 +1,86 @@
+.task {
+  background: var(--gray-500);
+  padding: 1rem;
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.task + .task {
+  margin-top: 1rem;
+}
+
+.task > span {
+  flex: 1;
+  line-height: 1.4;
+  color: var(--gray-100);
+  transition: color 0.2s;
+}
+
+.taskCompleted > span {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.checkTaskButton {
+  flex-shrink: 0;
+  background: transparent;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  overflow: hidden;
+  outline: 0;
+}
+
+.checkTaskButton div {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: background 0.2s, opacity 0.2s;
+  color: var(--gray-100);
+}
+
+.checkTaskButton:hover div,
+.checkTaskButton:focus div {
+  background: var(--blue-dark);
+  opacity: 0.2;
+}
+
+.taskCompleted .checkTaskButton {
+  border: 0;
+}
+
+.taskCompleted .checkTaskButton div {
+  background: var(--purple-dark);
+  opacity: 1;
+}
+
+.taskCompleted .checkTaskButton:hover div {
+  background: var(--purple);
+}
+
+.deleteTaskButton {
+  flex-shrink: 0;
+  background: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+
+  line-height: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.deleteTaskButton:hover,
+.deleteTaskButton:focus {
+  background: var(--gray-400);
+  color: var(--danger);
+}

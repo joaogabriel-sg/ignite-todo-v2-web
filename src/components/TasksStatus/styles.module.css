@@ -1,0 +1,33 @@
+.statusContainer {
+  width: 100%;
+  margin-top: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statusContainer strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 0.875rem;
+}
+
+.statusContainer strong:nth-child(1) {
+  color: var(--blue);
+}
+
+.statusContainer strong:nth-child(2) {
+  color: var(--purple);
+}
+
+.statusContainer strong span {
+  background: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  color: var(--gray-200);
+}
